@@ -1,5 +1,5 @@
 # IntelliTraderSettings
-Settings for IntelliTrader
+Settings for [IntelliTrader](https://github.com/jazzonaut/IntelliTrader)
 
 * Experimental    - this folder contains Experimental Setting. Meaning they are beeing bactested and papertasted of began livetesting. If they work live for a longer period of time at least a couple weeks the will be moved into the Stable folder.
 * Stable          - in this folder you will find Stable setting have been proven by market and were tested live.(Note: we are currently working on a new version but it takes time we want no suprises)  
