@@ -1,0 +1,159 @@
+{
+	"Rules": {
+		"Modules": [{
+				"Module": "Signals",
+				"Configuration": {
+					"ProcessingMode": "AllMatches",
+					"CheckInterval": 3
+				},
+				"Entries": [{
+						"Enabled": true,
+						"Name": "Buy",
+						"Modifiers": {
+							"CostMultiplier": 1
+						},
+						"Conditions": [{
+								"Signal": "TV-5mins",
+								"MinRating": 0.30
+							},
+							{
+								"Signal": "TV-15mins",
+								"MinRating": 0.30
+							},
+							{
+								"Signal": "TV-60mins",
+								"MinRating": 0.15
+							},
+							{
+								"Signal": "TV-240mins",
+								"MinRating": 0.15
+							},
+							{
+								"MinGlobalRating": -1,
+								"MaxGlobalRating":  1,
+								"MaxSpread": 0.5
+							}
+						],
+						"Trailing": {
+							"Enabled": true,
+							"MinDuration": 8,
+							"MaxDuration": 480,
+							"StartConditions": [{
+									"MinGlobalRating": -1,
+									"MaxGlobalRating":  1
+								},
+								{
+									"Signal": "TV-1mins",
+									"MinRating": 0.3
+								}
+							]
+						}
+					},
+					{
+						"Enabled": true,
+						"Name": "Swap",
+						"Action": "Swap",
+						"Modifiers": {
+							"CostMultiplier": 1
+						},
+						"Conditions": [{
+								"Signal": "TV-5mins",
+								"MinRating": 0.30
+							},
+							{
+								"Signal": "TV-15mins",
+								"MinRating": 0.30
+							},
+							{
+								"Signal": "TV-60mins",
+								"MinRating": 0.20
+							},
+							{
+								"Signal": "TV-240mins",
+								"MinRating": 0.20
+							},
+							{
+								"MinGlobalRating": -1,
+								"MaxGlobalRating":  1,
+								"MaxSpread": 0.5
+							}
+						],
+						"Trailing": {
+							"Enabled": true,
+							"MinDuration": 10,
+							"MaxDuration": 480,
+							"StartConditions": [{
+									"MinGlobalRating": -0.3,
+									"MaxGlobalRating": 0.3
+								},
+								{
+									"Signal": "TV-1mins",
+									"MinRating": 0.3
+								}
+							]
+						}
+					}
+				]
+			},
+			{
+				"Module": "Trading",
+				"Configuration": {
+					"ProcessingMode": "AllMatches",
+					"CheckInterval": 3
+				},
+				"Entries": [{
+						"Enabled": true,
+						"Name": "MyMarketRule",
+						"Modifiers": {
+							"BuyTrailing": -0.25,
+							"SellMargin": 0.9,
+							"SellTrailing": 0.4,
+						},
+						"Conditions": [{
+							"MinGlobalRating": -1.0,
+							"MaxGlobalRating":  1.0
+						}]
+					},
+					{
+						"Enabled": true,
+						"Name": "MySwapRule",
+						"Modifiers": {
+							"BuyDCAEnabled": false,
+							"SwapEnabled": true,
+							"SwapSignalRules": ["Swap"],
+							"SwapTimeout": 1800
+						},
+						"Conditions": [
+						{
+							"Signal": "TV-60mins",
+							"MaxRating": 0.15,
+							"MaxMargin": -5
+						}
+						]
+					},
+					{
+						"Enabled": true,
+						"Name": "MySecretDCARule",
+						"Modifiers": {
+							"BuyDCAEnabled": true
+						},
+						"Conditions": [
+							{
+								"Signal": "TV-15mins",
+								"MinRating": 0.35
+							},
+						    {
+								"Signal": "TV-60mins",
+								"MinRating": 0.35
+							},
+							{
+								"Signal": "TV-240mins",
+								"MinRating": 0.25
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}
