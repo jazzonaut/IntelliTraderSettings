@@ -1,0 +1,24 @@
+					{
+						"Enabled": true,
+						"Name": "DCA Enabled",
+						"Modifiers": {
+							"BuyDCAEnabled": true
+						},
+						"Conditions": [{
+								"Signal": "TV-5mins",
+								"MinRating": 0.35
+							},
+							{
+								"Signal": "TV-15mins",
+								"MinRating": 0.35
+							},
+						    {
+								"Signal": "TV-60mins",
+								"MinRating": 0.35
+							},
+							{
+								"Signal": "TV-240mins",
+								"MinRating": 0.25
+							}
+						]
+					}

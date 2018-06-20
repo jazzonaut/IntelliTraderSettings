@@ -1,0 +1,63 @@
+					{
+						"Enabled": true,
+						"Name": "Bear",
+						"Modifiers": {
+							"BuyTrailing": -0.35,
+							"SellMargin": 0.5,
+							"SellTrailing": 0.1,
+							"DCALevels": [
+								{
+									"Margin": -1,
+									"SellDCAMargin": 0.2,
+									"SellDCATrailing": 0.25,
+									"SellDCATrailingStopMargin": 0.2
+								  },
+								  {
+									"Margin": -1,
+									"SellDCAMargin": 0.2,
+									"SellDCATrailing": 0.25,
+									"SellDCATrailingStopMargin": 0.2
+								  },
+								  {
+									"Margin": -0.8,
+									"SellDCAMargin": 0.2,
+									"SellDCATrailing": 0.25,
+									"SellDCATrailingStopMargin": 0.2
+								  },
+								  {
+									"Margin": -0.8,
+									"SellDCAMargin": 0.2,
+									"SellDCATrailing": 0.25,
+									"SellDCATrailingStopMargin": 0.2
+								  },
+								  {
+									"Margin": -0.6,
+									"SellDCAMargin": 0.2,
+									"SellDCATrailing": 0.25,
+									"SellDCATrailingStopMargin": 0.2
+								  },
+								  {
+									"Margin": -0.6,
+									"SellDCAMargin": 0.2,
+									"SellDCATrailing": 0.25,
+									"SellDCATrailingStopMargin": 0.2
+								  },
+								  {
+									"Margin": -0.5,
+									"SellDCAMargin": 0.2,
+									"SellDCATrailing": 0.25,
+									"SellDCATrailingStopMargin": 0.2
+								  },
+								  {
+									"Margin": -0.5,
+									"SellDCAMargin": 0.2,
+									"SellDCATrailing": 0.25,
+									"SellDCATrailingStopMargin": 0.2
+								  }
+							  ]							
+						},
+						"Conditions": [{
+							"MinGlobalRating": -0.2,
+							"MaxGlobalRating": -0.1
+						}]
+					},
