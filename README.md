@@ -1,4 +1,4 @@
-# IntelliTraderSettings
+# Settings for IntelliTrader
 Settings for [IntelliTrader](https://github.com/jazzonaut/IntelliTrader)
 
 * Experimental    - This folder contains Experimental Setting. Meaning they are being backtested and papertested of began livetesting. If they work live for a longer period of time at least a couple weeks the will be moved into the Stable folder.
